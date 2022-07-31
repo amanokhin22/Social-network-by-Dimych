@@ -1,0 +1,389 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMqRoBkaCHSaUz9uBxlP_AZMhy_hvzrL6GKeXenke-A&s",
+      "followed": true,
+      "fullName": "Artiom",
+      "status": "Cool guy",
+      "location": {
+        "city": "Kharkiv",
+        "country": "Ukraine"
+      }
+    },
+    {
+      "id": 2,
+      "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMqRoBkaCHSaUz9uBxlP_AZMhy_hvzrL6GKeXenke-A&s",
+      "followed": false,
+      "fullName": "Bee",
+      "status": "No so much",
+      "location": {
+        "city": "Tutushi",
+        "country": "Berdy"
+      }
+    },
+    {
+      "id": 3,
+      "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMqRoBkaCHSaUz9uBxlP_AZMhy_hvzrL6GKeXenke-A&s",
+      "followed": false,
+      "fullName": "Govno",
+      "status": "Monobrov",
+      "location": {
+        "city": "Kiev",
+        "country": "Ukraine"
+      }
+    },
+    {
+      "id": 4,
+      "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMqRoBkaCHSaUz9uBxlP_AZMhy_hvzrL6GKeXenke-A&s",
+      "followed": true,
+      "fullName": "Little",
+      "status": "Ok, Google",
+      "location": {
+        "city": "Odessa",
+        "country": "Ukraine"
+      }
+    }
+  ],
+
+  "d-users": {
+    "items": [
+      {
+        "name": "Rafalekjs",
+        "id": 25072,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "De-Lynn",
+        "id": 25071,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "tolanchik",
+        "id": 25070,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "tolanchik1987rus",
+        "id": 25069,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "tolanchik1987tlt",
+        "id": 25068,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "tolanchik1987",
+        "id": 25067,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "steve",
+        "id": 25066,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "Arch",
+        "id": 25065,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "ArchersKing",
+        "id": 25064,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      },
+      {
+        "name": "Norair",
+        "id": 25063,
+        "uniqueUrlName": null,
+        "photos": {
+          "small": null,
+          "large": null
+        },
+        "status": null,
+        "followed": false
+      }
+    ],
+    "totalCount": 20080,
+    "error": null
+  },
+
+  "profile": [
+    {
+      "aboutMe": "I'm superhero",
+      "contacts": {
+        "facebook": "",
+        "website": null,
+        "vk": "https://vk.com/id272514963",
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": true,
+      "lookingForAJobDescription": "React?Redux?",
+      "fullName": "Dispatch Dispatchevich",
+      "userId": 20070,
+      "id": 20070,
+      "photos": {
+        "small": "https://media.funalive.com/article/images/funny-interesting-pics-13oct16-2.jpg",
+        "large": "https://allthatsinteresting.com/wordpress/wp-content/uploads/2013/09/interesting-pictures-dragon-falls.jpg"
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "Rafalekjs",
+      "userId": 25072,
+      "id": 25072,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "ArchersKing",
+      "userId": 25064,
+      "id": 25064,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "Norair",
+      "userId": 25063,
+      "id": 25063,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "De-Lynn",
+      "userId": 25071,
+      "id": 25071,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "tolanchik1987",
+      "userId": 25069,
+      "id": 25069,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "tolanchik1987tlt",
+      "userId": 25068,
+      "id": 25068,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "tolanchik1987",
+      "userId": 25067,
+      "id": 25067,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "steve",
+      "userId": 25066,
+      "id": 25066,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    },
+    {
+      "aboutMe": null,
+      "contacts": {
+        "facebook": null,
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": null,
+        "github": null,
+        "mainLink": null
+      },
+      "lookingForAJob": false,
+      "lookingForAJobDescription": null,
+      "fullName": "Arch",
+      "userId": 25065,
+      "id": 25065,
+      "photos": {
+        "small": null,
+        "large": null
+      }
+    }
+  ]
+}
+

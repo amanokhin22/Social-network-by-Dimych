@@ -1,0 +1,9 @@
+.profile {
+    grid-area: p;
+    background-color: cornflowerblue;
+}
+.profile img {
+    width: 500px;
+    background-size: contain;
+}
+

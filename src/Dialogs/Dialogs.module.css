@@ -1,0 +1,25 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: #ff6900;
+    background-image: url("http://wallpaperset.com/w/full/d/8/1/234684.jpg");
+    height: calc(100vh - 80px);
+}
+.dialogs img {
+width: 1000px;
+    object-fit: cover;
+}
+.dialogsItems a {
+    color: white;
+    text-decoration: none;
+}
+.dialogsItems a.activeLink {
+    color: red;
+}
+.messages {
+    padding: 10px;
+    color: white;
+}
+.dialogsItems  {
+    padding: 10px;
+}

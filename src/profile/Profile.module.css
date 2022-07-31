@@ -1,0 +1,10 @@
+.profile {
+    grid-area: p;
+    background-color: #ff6900;
+}
+.profile img {
+    width: 1000px;
+    height: 300px;
+    object-fit: cover;
+}
+
