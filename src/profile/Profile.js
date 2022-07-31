@@ -7,7 +7,7 @@ const Profile = (props) => {
 
     return (
         <div className={s.profile}>
-            <ProfileInfo profile={props.profile}/>
+            {props.hideProfile ? "" : <ProfileInfo profile={props.profile}/>}
             <MyPostsContainer />
         </div>
     )

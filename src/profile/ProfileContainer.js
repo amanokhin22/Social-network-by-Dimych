@@ -6,15 +6,19 @@ import {setUserProfile} from "../Redux/profile-reducer";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        axios.get(` http://localhost:3001/profile/20070`)
-            .then(response => {
-                this.props.setUserProfile(response.data)
-            });
+        const userId = this.props.match.params.userId;
+        if (userId) {
+            axios.get(`http://localhost:3001/profile/${userId}`)
+                .then(response => {
+                    this.props.setUserProfile(response.data)
+                });
+        }
     }
 
     render() {
+        const userId = this.props.match.params.userId;
         return (
-            <Profile {...this.props} profile={this.props.profile}/>
+            <Profile {...this.props} profile={this.props.profile} hideProfile={!userId}/>
         )
     }
 }

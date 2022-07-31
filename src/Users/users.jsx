@@ -17,17 +17,17 @@ const Users = (props) => {
 
     return <div>
         <div> {pages.map(p => {
-                return <span className={props.currentPage === p && styles.selectedPage}
-                             onClick={() => {
-                                 props.onPageChanged(p);
-                             }}>{p}</span>
-            })}
+            return <span className={props.currentPage === p && styles.selectedPage}
+                         onClick={() => {
+                             props.onPageChanged(p);
+                         }}>{p}</span>
+        })}
         </div>
         {props.users.map(user => <div key={user.id}>
             <div>
-                <NavLink to={'/profile/' + user.id} >
-                <img alt='' src={user.photos.small != null ? user.photos.small : userPhoto
-                } className={styles.userPhoto}/>
+                <NavLink to={'/profile/' + user.id}>
+                    <img alt='' src={user.photos.small != null ? user.photos.small : userPhoto
+                    } className={styles.userPhoto}/>
                 </NavLink>
             </div>
             <div>
