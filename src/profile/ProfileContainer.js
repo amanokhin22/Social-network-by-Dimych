@@ -14,7 +14,6 @@ class ProfileContainer extends React.Component {
                 });
         }
     }
-
     render() {
         const userId = this.props.match.params.userId;
         return (

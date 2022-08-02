@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from "../header/Header";
 import Navlink from "../nav/NavLink";
 import News from '../News/News';
 import {BrowserRouter, Route} from "react-router-dom";
@@ -9,12 +8,13 @@ import Settings from "../Settings/Settings";
 import DialogsContainer from "../Dialogs/DialogsContainer";
 import UsersContainer from "../Users/UsersContainer";
 import ProfileContainer from "../profile/ProfileContainer";
+import HeaderContainer from "../header/HeaderContainer";
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
-                <Header/>
+                <HeaderContainer/>
                 <Navlink/>
                 <div className='app-wrapper-content'>
 

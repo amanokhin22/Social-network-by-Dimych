@@ -384,6 +384,29 @@
         "large": null
       }
     }
-  ]
+  ],
+
+  "auth-me-ok": {
+    "resultCode": 0,
+    "messages": [],
+    "data": {
+      "id": 1,
+      "email": "amanokhin22@ukr.net",
+      "login": "Gutor"
+    }
+  },
+  "auth-me-fail": {
+    "data": {},
+    "messages": [
+      "You are not authorized"
+    ],
+    "fieldsErrors": [],
+    "resultCode": 1
+  },
+
+"follow-post":{
+  "message": "Authorization has been denied for this request."
+}
+
 }
 

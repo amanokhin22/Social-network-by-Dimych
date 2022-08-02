@@ -2,6 +2,7 @@ import React from "react";
 import userPhoto from "../asets/images/users.png";
 import styles from './users.module.css';
 import {NavLink} from 'react-router-dom';
+import axios from "axios";
 
 
 const Users = (props) => {
@@ -31,11 +32,28 @@ const Users = (props) => {
                 </NavLink>
             </div>
             <div>
-                {user.followed ? <button onClick={() => {
-                    props.unfollow(user.id)
-                }}>Unfollow</button> : <button onClick={() => {
-                    props.follow(user.id)
-                }}>Follow</button>}
+                {user.followed
+                    ? <button onClick={() => {
+                        axios.delete(`http://localhost:3001/follow-post/${user.id}`,{
+                            withCredentials: true
+                        })
+                            .then(response => {
+                                if (response.data.resultCode == 0) {
+                                    props.unfollow(user.id)
+                                }
+                            });
+
+                    }}>Unfollow</button>
+                    : <button onClick={() => {
+                        axios.post(`http://localhost:3001/follow-post/${user.id}`, {}, {
+                            withCredentials: true
+                        })
+                            .then(response => {
+                                if (response.data.resultCode == 0) {
+                                    props.follow(user.id)
+                                }
+                            });
+                    }}>Follow</button>}
 
             </div>
 
