@@ -14,13 +14,17 @@ export const usersAPI = {
             .then(response => {
                 return response.data
             });
+    },
+    follow(userId) {
+       return instance.post(`http://localhost:3001/follow-post/${userId}`)
+    },
+
+    unfollow(userId) {
+        return instance.delete(`http://localhost:3001/follow-post/${userId}`)
     }
 }
 
 
-export const getUsers2 = (currentPage = 1, pageSize = 10) => {
-    return instance.get(`/profile?page=${currentPage}&count=${pageSize}`)
-        .then(response => {
-            return response.data
-        });
-}
+
+
+
