@@ -1,17 +1,13 @@
 import React from 'react';
 import Profile from "./Profile";
-import axios from "axios";
 import {connect} from "react-redux";
-import {setUserProfile} from "../Redux/profile-reducer";
+import {getUserProfile} from "../Redux/profile-reducer";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
         const userId = this.props.match.params.userId;
-        if (userId) {
-            axios.get(`http://localhost:3001/profile/${userId}`)
-                .then(response => {
-                    this.props.setUserProfile(response.data)
-                });
+        if (!userId) {
+            this.props.getUserProfile(userId);
         }
     }
     render() {
@@ -26,4 +22,4 @@ const mapStateToProps = (state) => ({
     profile: state.profilePage.profile
 });
 
-export default connect(mapStateToProps, {setUserProfile})(ProfileContainer)
+export default connect(mapStateToProps, {getUserProfile})(ProfileContainer)

@@ -18,9 +18,12 @@ export const usersAPI = {
     follow(userId) {
        return instance.post(`http://localhost:3001/follow-post/${userId}`)
     },
-
     unfollow(userId) {
         return instance.delete(`http://localhost:3001/follow-post/${userId}`)
+    },
+    getProfile(userId) {
+        return axios.get(`http://localhost:3001/profile/${userId}`)
+
     }
 }
 
