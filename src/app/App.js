@@ -9,15 +9,18 @@ import DialogsContainer from "../Dialogs/DialogsContainer";
 import UsersContainer from "../Users/UsersContainer";
 import ProfileContainer from "../profile/ProfileContainer";
 import HeaderContainer from "../header/HeaderContainer";
+import LoginPage from "../login/login";
+
 
 const App = () => {
     return (
+
         <BrowserRouter>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navlink/>
-                <div className='app-wrapper-content'>
 
+                <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={() =>
                         <DialogsContainer/>}/>
 
@@ -30,6 +33,8 @@ const App = () => {
                     <Route path='/users' render={() => <UsersContainer/>}/>
 
                     <Route path='/settings' render={() => <Settings/>}/>
+
+                    <Route path='/login' render={() => <LoginPage/>}/>
 
                 </div>
             </div>
