@@ -8,6 +8,8 @@ import {
 import React from "react";
 import Users from "./users";
 import Preloader from "../common/preloader/Preloader";
+import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 class UsersContainer extends React.Component {
 
@@ -61,6 +63,7 @@ const mapStateToProps = (state) => {
         followingInProgress: state.usersPage.followingInProgress
     }
 }
+let withRedirect = withAuthRedirect(UsersContainer);
 // const mapDispatchToProps = (dispatch) => {
 //     return {
 //         follow: (userId) => {
@@ -85,11 +88,14 @@ const mapStateToProps = (state) => {
 // }
 //Мы може писать mapDispatchToProps как вверху, но и можем проставить их внизу, удалив AC и значения. ключ и будет значением, а сам реакт продиспатчит
 
-export default connect(mapStateToProps,
-    {
-        follow,
-        unfollow,
-        setCurrentPage,
-        toggleFollowingProgress,
-        getUsers
-    })(UsersContainer);
+export default compose(
+    withAuthRedirect,
+    connect(mapStateToProps,
+        {
+            follow,
+            unfollow,
+            setCurrentPage,
+            toggleFollowingProgress,
+            getUsers
+        })
+) (UsersContainer)
