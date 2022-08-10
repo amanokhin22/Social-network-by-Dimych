@@ -22,8 +22,20 @@ export const usersAPI = {
         return instance.delete(`http://localhost:3001/follow-post/${userId}`)
     },
     getProfile(userId) {
-        return axios.get(`http://localhost:3001/profile/${userId}`)
+        console.log('Obsolete method. Please profileAPI object.')
+        return profileAPI.getProfile(userId);
+    }
+}
 
+export const profileAPI = {
+    getProfile(userId) {
+        return axios.get(`https://jsonplaceholder.typicode.com/users`)
+    },
+    getStatus(userId) {
+        return instance.get(`https://jsonplaceholder.typicode.com/posts`)
+    },
+    updateStatus(status) {
+return instance.put(`https://jsonplaceholder.typicode.com/posts`, {status: status})
     }
 }
 
