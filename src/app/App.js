@@ -9,7 +9,7 @@ import DialogsContainer from "../Dialogs/DialogsContainer";
 import UsersContainer from "../Users/UsersContainer";
 import ProfileContainer from "../profile/ProfileContainer";
 import HeaderContainer from "../header/HeaderContainer";
-import LoginPage from "../login/login";
+import Login from "../login/login";
 
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
 
                     <Route path='/settings' render={() => <Settings/>}/>
 
-                    <Route path='/login' render={() => <LoginPage/>}/>
+                    <Route path='/login' render={() => <Login/>}/>
 
                 </div>
             </div>

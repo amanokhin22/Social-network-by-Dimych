@@ -16,7 +16,7 @@ export const usersAPI = {
             });
     },
     follow(userId) {
-       return instance.post(`http://localhost:3001/follow-post/${userId}`)
+        return instance.post(`http://localhost:3001/follow-post/${userId}`)
     },
     unfollow(userId) {
         return instance.delete(`http://localhost:3001/follow-post/${userId}`)
@@ -35,7 +35,7 @@ export const profileAPI = {
         return instance.get(`https://jsonplaceholder.typicode.com/posts`)
     },
     updateStatus(status) {
-return instance.put(`https://jsonplaceholder.typicode.com/posts`, {status: status})
+        return instance.put(`https://jsonplaceholder.typicode.com/posts`, {status: status})
     }
 }
 
