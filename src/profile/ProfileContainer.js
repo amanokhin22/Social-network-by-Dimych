@@ -34,8 +34,22 @@ export default compose(
     //withAuthRedirect
 )(ProfileContainer);
 
+// const userConnect = connect(mapStateToProps, {getUserProfile, getStatus, updateStatus})
+//
+// const postConnect = connect(mapStateToProps, {getUserProfile, getStatus, updateStatus})
 
+// export default userConnect(ProfileContainer)
+//
+// export default postConnect(ProfileContainer)
+//
+// export default userConnect(postConnect(ProfileContainer))
+//
+// export default compose(userConnect, postConnect) (ProfileContainer)
 
+// const connect2 = (mapStateToProps, mapDispatchToProps) => (Component) => (props) => (
+//     <Component {...props} {...mapDispatchToProps} {...mapStateToProps(store.getState())}/>
+// )
+// export default connect2(mapStateToProps, {getUserProfile, getStatus, updateStatus}) (ProfileContainer)
 
 
 

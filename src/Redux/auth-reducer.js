@@ -3,7 +3,6 @@ import {authAPI} from "../api/apiUsers";
 
 const SET_USER_DATA = 'SET_USER_DATA';
 
-
 const initialState = {
     userId: null,
     email: null,
@@ -38,25 +37,25 @@ export const getAuthUserData = () => (dispatch) => {
         .then(response => {
             if (response.data.resultCode === 0) {
                 let {userId, email, login} = response.data.data;
-                dispatch (setAuthUserData(userId, email, login, true));
+                dispatch(setAuthUserData(userId, email, login, true));
             }
         });
 }
 
-export const login = (email, password, rememberMe) => (dispatch) => {
-    authAPI.login(email, password, rememberMe)
-        .then(response => {
-            if (response.data.resultCode === 0) {
-                dispatch (getAuthUserData())
-            }
-        });
-}
+export const login = (email, password, rememberMe) =>
+    async (dispatch) => {
+        const response = await authAPI.login(email, password, rememberMe)
+        if (response.data.resultCode === 0) {
+            dispatch(getAuthUserData())
+        }
+    }
+
 
 export const logOut = () => (dispatch) => {
     authAPI.logOut()
         .then(response => {
             if (response.data.resultCode === 0) {
-                dispatch (setAuthUserData(null, null, null, false));
+                dispatch(setAuthUserData(null, null, null, false));
             }
         });
 }

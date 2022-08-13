@@ -1,25 +1,40 @@
 import axios from "axios";
 
+
 const instance = axios.create({
     withCredentials: true,
-    baseURL: 'http://localhost:3001/d-users',
+    baseURL: 'http://localhost:3001/',
+    headers: {
+        "API-KEY": ""
+    }
+});
+
+const placeholder = axios.create({
+    withCredentials: true,
+    baseURL: 'https://jsonplaceholder.typicode.com/',
+    headers: {
+        "API-KEY": ""
+    }
+});
+
+const dummy = axios.create({
+    withCredentials: true,
+    baseURL: 'https://dummyjson.com/',
     headers: {
         "API-KEY": ""
     }
 });
 
 export const usersAPI = {
-    getUsers(currentPage = 1, pageSize = 10) {
-        return instance.get(`?page=${currentPage}&count=${pageSize}`)
-            .then(response => {
-                return response.data
-            });
+    async getUsers(currentPage = 1, pageSize = 10) {
+        const response = await instance.get(`d-users?page=${currentPage}&count=${pageSize}`)
+        return response.data;
     },
     follow(userId) {
-        return instance.post(`http://localhost:3001/follow-post/${userId}`)
+        return instance.post(`follow-post/${userId}`)
     },
     unfollow(userId) {
-        return instance.delete(`http://localhost:3001/follow-post/${userId}`)
+        return instance.delete(`follow-post/${userId}`)
     },
     getProfile(userId) {
         console.log('Obsolete method. Please profileAPI object.')
@@ -29,28 +44,28 @@ export const usersAPI = {
 
 export const profileAPI = {
     getProfile(userId) {
-        return axios.get(`https://jsonplaceholder.typicode.com/users`)
+        return placeholder.get(`users`)
     },
     getStatus(userId) {
-        return instance.get(`https://jsonplaceholder.typicode.com/posts`)
+        return placeholder.get(`posts`)
     },
     updateStatus(status) {
-        return instance.put(`https://jsonplaceholder.typicode.com/posts`, {status: status})
+        return placeholder.put(`posts`, {status: status})
     }
 }
 
 export const authAPI = {
     me() {
-        return instance.get(`https://dummyjson.com/auth`)
+        return dummy.get(`auth`)
     },
     login(email, password, rememberMe = false) {
-        return instance.post
-        (`https://dummyjson.com/auth/login`,
-            {email, password, rememberMe});
+        return dummy.post(
+            `auth/login`,
+            {email, password, rememberMe}
+        );
     },
     logOut() {
-        return instance.delete
-        (`https://dummyjson.com/auth/login`);
+        return dummy.delete(`auth/login`);
     },
 }
 
