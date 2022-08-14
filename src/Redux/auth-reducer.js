@@ -1,5 +1,6 @@
 import {authService} from "../api/authService";
 import {authAPI} from "../api/apiUsers";
+import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'SET_USER_DATA';
 
@@ -42,11 +43,23 @@ export const getAuthUserData = () => (dispatch) => {
         });
 }
 
+// export const login = (email, password, rememberMe) => {
+//     authAPI.login(email, password, rememberMe)
+//     if (response.data.resultCode === 0) {
+//         dispatch(getAuthUserData())
+//     } else {
+// dispatch(stopSubmit('login', {_error: 'Common error'}));
+//     }
+// }
+//     Это вариант Димыча. Не стал так делать, так как всё равно нет доступа к его апи
 export const login = (email, password, rememberMe) =>
     async (dispatch) => {
         const response = await authAPI.login(email, password, rememberMe)
         if (response.data.resultCode === 0) {
             dispatch(getAuthUserData())
+        } else {
+            let action = stopSubmit('login', {email: 'Email is wrong'});
+            dispatch(action);
         }
     }
 
