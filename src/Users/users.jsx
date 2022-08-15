@@ -4,16 +4,11 @@ import styles from './users.module.css';
 import {NavLink} from 'react-router-dom';
 
 const Users = (props) => {
-
     const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-
     const pages = [];
     for (let i = 1; i <= pagesCount; i++) {
-
-
         pages.push(i);
     }
-
     return <div>
         <div> {pages.map(p => {
             return <span className={props.currentPage === p && styles.selectedPage}
@@ -32,11 +27,15 @@ const Users = (props) => {
             <div>
                 {user.followed
                     ? <button disabled={props.followingInProgress.some(id => id === user.id)}
-                              onClick={() => {props.unfollow(user.id)}
-                    }>Unfollow</button>
+                              onClick={() => {
+                                  props.unfollow(user.id)
+                              }
+                              }>Unfollow</button>
                     : <button disabled={props.followingInProgress.some(id => id === user.id)}
-                              onClick={() => {props.follow(user.id) }
-                    }>Follow</button>}
+                              onClick={() => {
+                                  props.follow(user.id)
+                              }
+                              }>Follow</button>}
 
             </div>
 

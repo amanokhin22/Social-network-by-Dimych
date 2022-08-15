@@ -34,7 +34,7 @@ export const setAuthUserData = (userId, email, login, isAuth) =>
 
 export const getAuthUserData = () => (dispatch) => {
     authService.auth('Gutor')
-        //Правильно указать authAPI.me(),но тогда нет доступа к двум разделам на сайте
+        //Правильно указать  authAPI.me(),но тогда нет доступа к двум разделам на сайте
         .then(response => {
             if (response.data.resultCode === 0) {
                 let {userId, email, login} = response.data.data;

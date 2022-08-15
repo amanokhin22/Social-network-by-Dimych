@@ -11,7 +11,12 @@ class ProfileContainer extends React.Component {
         const userId = this.props.match.params.userId;
         if (!userId) {
             setAuthUserData.userId = this.props.authorizedUserId;
+            // if (!setAuthUserData.userId) {
+                //     this.props.history.push("/login")
+                // }
+            //так как у нас фейковый сервак, то, примення данный перебор, мы заглючиваем браузер
         }
+
         this.props.getUserProfile(userId);
         this.props.getStatus(userId);
     }
@@ -37,7 +42,6 @@ export default compose(
     connect(mapStateToProps,
         {getUserProfile, getStatus, updateStatus}),
     withRouter,
-    //withAuthRedirect
 )(ProfileContainer);
 
 // const userConnect = connect(mapStateToProps, {getUserProfile, getStatus, updateStatus})
