@@ -105,7 +105,6 @@ const mapStateToProps = (state) => {
 //Мы може писать mapDispatchToProps как вверху, но и можем проставить их внизу, удалив AC и значения. ключ и будет значением, а сам реакт продиспатчит
 
 export default compose(
-    //withAuthRedirect,
     connect(mapStateToProps,
         {
             follow,
