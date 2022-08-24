@@ -3,7 +3,8 @@ import {profileAPI, usersAPI} from "../api/apiUsers";
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
-const DELETE_POST = "DELETE_POST"
+const DELETE_POST = "DELETE_POST";
+const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
 
 const initialState = {
     posts: [
@@ -34,8 +35,12 @@ const profileReducer = (state = initialState, action) => {
             return {...state, profile: action.profile};
 
         case DELETE_POST:
-            return {...state, posts: state.posts.filter(p => p.id != action.postId)};
-        default:
+            return {...state, posts: state.posts.filter(p => p.id !== action.postId)};
+
+        case SAVE_PHOTO_SUCCESS:
+            return {...state, profile: {...state.profile, photos: action.photos}};
+
+            default:
             return state;
     }
 }
@@ -49,6 +54,9 @@ export const setStatus = (status) => ({
 });
 export const deletePost = (postId) => ({
     type: DELETE_POST, postId
+});
+export const savePhotoSuccess = (photos) => ({
+    type: SAVE_PHOTO_SUCCESS, photos
 })
 
 //Теперь пошли санки
@@ -68,4 +76,12 @@ export const updateStatus = (status) => async (dispatch) => {
         dispatch(setStatus(status));
     }
 }
+
+export const savePhoto = (file) => async (dispatch) => {
+    const response = await profileAPI.savePhoto(file);
+    if (response.data.resultCode === 0) {
+        dispatch(savePhotoSuccess(response.data.data.photos));
+    }
+}
+
 export default profileReducer;

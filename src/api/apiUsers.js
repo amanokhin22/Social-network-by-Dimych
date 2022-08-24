@@ -26,7 +26,7 @@ const dummy = axios.create({
 });
 
 export const usersAPI = {
-    async getUsers(currentPage = 1, pageSize = 10) {
+    async getUsers(currentPage = 1, pageSize = 5) {
         const response = await instance.get(`d-users?page=${currentPage}&count=${pageSize}`)
         return response.data;
     },
@@ -42,14 +42,24 @@ export const usersAPI = {
 }
 
 export const profileAPI = {
-    getProfile(userId) {
+    getProfile() {
         return placeholder.get(`users`)
     },
-    getStatus(userId) {
+    getStatus() {
         return placeholder.get(`posts`)
     },
     updateStatus(status) {
         return placeholder.put(`posts`, {status: status})
+    },
+    savePhoto(photoFile) {
+        // eslint-disable-next-line no-use-before-define
+        const formData = new formData();
+        formData.append("image", photoFile);
+        return placeholder.get(`photos`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
     }
 }
 

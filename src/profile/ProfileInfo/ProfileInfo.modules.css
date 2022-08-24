@@ -1,3 +1,16 @@
 .descriptionBlock {
     padding: 10px;
 }
+
+.avatar {
+    max-width: 50px;
+    max-height: 20px;
+    max-font-size: 20px;
+
+}
+
+.imageWall {
+    width: 1000px;
+    height: 150px;
+    object-fit: cover
+}
