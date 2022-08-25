@@ -163,22 +163,49 @@
     "error": null
   },
 
+  "my-profile":[
+    {
+      "aboutMe": "I'm superhero",
+      "contacts": {
+        "facebook": "",
+        "website": null,
+        "vk": null,
+        "twitter": null,
+        "instagram": null,
+        "youtube": "Артём Манохин",
+        "github": "amanokhin22",
+        "mainLink": null
+      },
+      "lookingForAJob": true,
+      "lookingForAJobDescription": "React?Redux?",
+      "fullName": "Артём Владимирович Манохин",
+      "userId": 25070,
+      "id": 25070,
+      "photos": {
+        "small": "https://media.funalive.com/article/images/funny-interesting-pics-13oct16-2.jpg",
+        "large": "https://allthatsinteresting.com/wordpress/wp-content/uploads/2013/09/interesting-pictures-dragon-falls.jpg"
+      }
+    }
+],
+
+
+
   "profile": [
     {
       "aboutMe": "I'm superhero",
       "contacts": {
         "facebook": "",
         "website": null,
-        "vk": "https://vk.com/id272514963",
+        "vk": null,
         "twitter": null,
         "instagram": null,
-        "youtube": null,
-        "github": null,
+        "youtube": "Артём Манохин",
+        "github": "amanokhin22",
         "mainLink": null
       },
       "lookingForAJob": true,
       "lookingForAJobDescription": "React?Redux?",
-      "fullName": "Dispatch Dispatchevich",
+      "fullName": "Артём Владимирович Манохин",
       "userId": 25070,
       "id": 25070,
       "photos": {

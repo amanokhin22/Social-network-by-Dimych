@@ -41,6 +41,12 @@ export const usersAPI = {
     }
 }
 
+export const myProfileAPI = {
+   async setMyProfile() {
+        return await instance.get('my-profile')
+    }
+}
+
 export const profileAPI = {
     getProfile() {
         return placeholder.get(`users`)
@@ -49,7 +55,7 @@ export const profileAPI = {
         return placeholder.get(`posts`)
     },
     updateStatus(status) {
-        return placeholder.put(`posts`, {status: status})
+        return placeholder.put(`posts`, {status: status});
     },
     savePhoto(photoFile) {
         // eslint-disable-next-line no-use-before-define
@@ -60,6 +66,9 @@ export const profileAPI = {
                 'Content-Type': 'multipart/form-data'
             }
         })
+    },
+    saveProfile(profile) {
+        return placeholder.put(`posts`, profile)
     }
 }
 
