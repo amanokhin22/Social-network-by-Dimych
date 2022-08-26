@@ -188,8 +188,6 @@
     }
 ],
 
-
-
   "profile": [
     {
       "aboutMe": "I'm superhero",
@@ -434,7 +432,10 @@
 
 "follow-post":{
   "message": "Authorization has been denied for this request."
-}
+},
 
+  "captchaUrl": {
+    "url": "https://social-network.s…8T0A1upERBOcRqj7yQ%3D%3D"
+}
 }
 

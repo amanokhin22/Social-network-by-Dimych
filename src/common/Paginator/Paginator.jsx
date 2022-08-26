@@ -38,7 +38,7 @@ const Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, porti
     let rightPortionPageNumber = portionNumber * portionSize;//формула что бы получить правую границу
 
 
-    return <div className={styles.paginator}>
+    return <div className={cn(styles.paginator)}>
         {portionNumber > 1 &&  //если portionNumber больше одного, показывать кнопку в лево
             <button onClick={() => {
                 setPortionNumber(portionNumber - 1)
